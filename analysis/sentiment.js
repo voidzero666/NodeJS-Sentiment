@@ -13,7 +13,7 @@ const tokenizeInput = (input) => {
 
 //bereken de negatieve waarde adhv. tokens uit afinn wordlist
 function calcNegative(input) {
-  var addPush = function (token, score) {
+  var addToken = function (token, score) {
     hits -= score;
     words.push(token);
   };
@@ -25,7 +25,7 @@ function calcNegative(input) {
   tokens.forEach(function (token) {
     if (afinnJson.hasOwnProperty(token)) {
       if (afinnJson[token] < 0) {
-        addPush(token, afinnJson[token]);
+        addToken(token, afinnJson[token]);
       }
     }
   });
@@ -39,7 +39,7 @@ function calcNegative(input) {
 
 // Bereken de positieve waarde adhv. tokens uit afinn wordlist
 function calcPositive(input) {
-  var addPush = function (token, score) {
+  var addToken = function (token, score) {
     hits += score;
     words.push(token);
   };
@@ -51,7 +51,7 @@ function calcPositive(input) {
   tokens.forEach(function (token) {
     if (afinnJson.hasOwnProperty(token)) {
       if (afinnJson[token] > 0) {
-        addPush(token, afinnJson[token]);
+        addToken(token, afinnJson[token]);
       }
     }
   });
