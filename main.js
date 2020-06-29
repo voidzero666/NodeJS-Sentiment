@@ -1,8 +1,8 @@
 const analyse = require("./analysis/sentiment");
 
-const appleData = require("./lists/apple_tweets.json");
-const elonData = require("./lists/elonmusk_tweets.json");
-const trumpData = require("./lists/trump_tweets.json");
+const appleData = require("./data/tweets/apple_tweets.json");
+const elonData = require("./data/tweets/elonmusk_tweets.json");
+const trumpData = require("./data/tweets/trump_tweets.json");
 
 let appleTweets = "";
 let trumpTweets = "";
