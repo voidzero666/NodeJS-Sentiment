@@ -1,4 +1,4 @@
-const afinnJson = require("../lists/afinn.json");
+const afinnJson = require("../data/wordlists/afinn.json");
 
 // tokenize input string and replace characters with regex
 const tokenizeInput = (input) => {
