@@ -58,6 +58,7 @@ const calcPositive = (input) => {
 
   return {
     score: hits,
+    // comparative: Score / het aantal gevonden woorden.
     comparative: hits / tokens.length,
     words: words,
   };
